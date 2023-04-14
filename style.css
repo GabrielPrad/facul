@@ -17,6 +17,10 @@ img{
     margin-top: 20px;
 }
 
+#burguer{
+    display: none;
+}
+
 .banner nav ul{
     text-align: right;
     margin-right: 25px;
@@ -129,7 +133,7 @@ td:hover{
 
 footer{
     background-color: rgba(81,10,104,255);
-    height: 200px;
+    height: 100%;
     color: white;
     display: flex;
     justify-content: space-around;
@@ -151,6 +155,7 @@ footer p:hover{
 .foot{
     display: flex;
     flex-direction: column;
+
 }
 
 
@@ -192,7 +197,7 @@ footer a:hover{
 }
 
 
-@media (min-width: 720px) {
+@media (min-width: 601px) {
     *{
         box-sizing: border-box;
         font-size: 15px;
@@ -207,18 +212,11 @@ footer a:hover{
         flex-direction: column;
         font-size: small;
     }
-
-    footer{
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-    }
-    
     
 
     }
 
-    @media (max-width: 720px) {
+    @media (max-width: 719px) {
         *{
             box-sizing: border-box;
             font-size: 15px;
@@ -228,6 +226,33 @@ footer a:hover{
             width: 100px;
         }
 
+        #burguer{
+            display: flex;
+            width: 50px;
+            height: 50px;
+            margin-left: 180px;
+            margin-top: 3vh;
+            background-color: #5e047f;
+            border-radius: 50%;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        #burguer:hover{
+            background-color: #b06ec3;
+            transform: translateY(3px);
+            box-shadow: 10px 5px 0px rgba(0,0,0,0.75);
+            transition: 0.9s linear;
+        }
+        
+        #burguer:active{
+            background-color: #b06ec3;
+            transform: translateY(1.5px);
+            box-shadow: 10px 5px 0px rgba(0,0,0,0.75);
+            transition: 0.5s linear;
+        }
+
         .banner {
             display: flex;
             flex-direction: column;
@@ -235,7 +260,11 @@ footer a:hover{
         }
 
         .menu{
-            margin-top: 95px;
+            display: none;
+        }
+
+        .noticias{
+            height: 100%;
         }
 
         footer{
